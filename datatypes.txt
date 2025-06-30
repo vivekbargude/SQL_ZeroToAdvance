@@ -1,0 +1,14 @@
+1. CHAR(50) : Allocates the fix length irrespective of the input.
+2. VARCHAR(50) : Allocates the length according to given size of input.
+3. BLOB(1000) : Used for longer string values.
+4. INT : Used to store integer values.
+5. FLOAT : Used to store decimal values with precision of 23
+6. DOUBLE : Used to store decimal values with precision of 23-56.
+7. BOOLEAN : Used for storing boolean values.Implemented by TINYINT(1) 0=False,1=True
+8. DATE : Used for storing date values in format of YYYY-MM-DD
+9. YEAR : Used for storing 4 digit year values
+
+Signed and Unsigned:
+
+1.Signed: Both -ve and +ve values.
+2.Unsigned: Only +ve values so that range can be increase occupying the space of -ve values.

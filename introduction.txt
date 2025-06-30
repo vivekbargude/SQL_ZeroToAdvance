@@ -1,0 +1,24 @@
+Database: Collection of data in the format so that it can be access easily.
+DBMS: To manage the database we use Database Management System.
+
+Types of Database:
+1.Relational: Data stored in form of tables/relations.
+for e.g MySQL,PostgreSQL etc.
+2.Non-relational database: Data is not stored in the form of table instead stored in the form of key-value,columnar,graph.
+for e.g MongoDB, Cassandra etc.
+
+SQL: Strutured query language used to interect with the database.
+Used to perform CRUD:
+1.Create 
+2.Read
+3.Update
+4.Delete
+
+Database Structure: Collection of only inte-related data.
+
+        Database
+        -Table1
+        -Table2
+
+1.Column : Structure/Schema of Table(Design).
+2.Row : Indivijual Data.

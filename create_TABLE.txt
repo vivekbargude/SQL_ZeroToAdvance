@@ -1,0 +1,17 @@
+Creating a Table :
+
+USE db_name;
+
+CREATE table_name(
+    id INT primary key,
+    name varchar(50),
+    age int not null
+);
+
+Inserting the values in Table:
+
+INSERT into table_name VALUES (arg1,arg2,arg3);
+
+View the Table:
+
+SELECT * from table_name;
