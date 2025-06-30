@@ -1,8 +1,0 @@
-Creating a database:
-
-CREATE DATABASE db_name; //Create
-
-DROP DATABASE db_name; //Delete the structure of Database.
-
-USE db_name; //Use the specified database for performing queries.
-
