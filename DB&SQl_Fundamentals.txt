@@ -1,24 +1,163 @@
-Database: Collection of data in the format so that it can be access easily.
-DBMS: To manage the database we use Database Management System.
+============================================================
+                 DATABASE & SQL FUNDAMENTALS
+============================================================
 
-Types of Database:
-1.Relational: Data stored in form of tables/relations.
-for e.g MySQL,PostgreSQL etc.
-2.Non-relational database: Data is not stored in the form of table instead stored in the form of key-value,columnar,graph.
-for e.g MongoDB, Cassandra etc.
+1. What is a Database?
+-----------------------
+A Database is a structured collection of related data
+that can be easily accessed, managed, and updated.
 
-SQL: Strutured query language used to interect with the database.
-Used to perform CRUD:
-1.Create 
-2.Read
-3.Update
-4.Delete
+Example:
+- A student database can contain tables for Students, Courses, and Results.
 
-Database Structure: Collection of only inte-related data.
+What is DBMS?
+--------------
+DBMS (Database Management System) is a software tool used to
+create, manage, and interact with databases.
 
-        Database
-        -Table1
-        -Table2
+Examples:
+- Relational DBMS (RDBMS): MySQL, PostgreSQL, Oracle
+- NoSQL DBMS: MongoDB, Cassandra
 
-1.Column : Structure/Schema of Table(Design).
-2.Row : Indivijual Data.
+------------------------------------------------------------
+
+2. Types of Databases
+-----------------------
+
+a. Relational Databases (RDBMS):
+- Store data in tables (rows and columns).
+- Use SQL for data manipulation.
+- Schema-based and highly structured.
+
+Examples: MySQL, PostgreSQL, Oracle
+
+b. Non-Relational Databases (NoSQL):
+- Store data in key-value, document, graph, or column formats.
+- Schema-less and more flexible for unstructured data.
+
+Examples: MongoDB (document), Cassandra (column-family)
+
+------------------------------------------------------------
+
+3. SQL – Structured Query Language
+-----------------------------------
+SQL is used to interact with relational databases.
+
+Used to perform CRUD operations:
+- Create
+- Read
+- Update
+- Delete
+
+------------------------------------------------------------
+
+4. Database Structure
+----------------------
+
+A database consists of one or more tables, each having:
+- Columns (Fields): Define schema or structure.
+- Rows (Records): Store actual data.
+
+Example Structure:
+Database
+├── Students
+│   ├── id
+│   ├── name
+│   └── age
+├── Courses
+
+------------------------------------------------------------
+
+5. Common SQL Data Types
+--------------------------
+
+CHAR(50)      → Fixed-length string (pads spaces if short)
+VARCHAR(50)   → Variable-length string (saves space)
+BLOB          → Binary Large Object (used for images/files/long text)
+INT           → Whole numbers
+FLOAT         → Decimal numbers (~6–7 digit precision)
+DOUBLE        → Higher-precision decimal (~15 digit precision)
+BOOLEAN       → True/False (Implemented as TINYINT(1); 0=False, 1=True)
+DATE          → Stores date in YYYY-MM-DD format
+YEAR          → Stores 4-digit year
+
+------------------------------------------------------------
+
+6. Signed vs Unsigned Integers
+-------------------------------
+
+Signed:    Can store both negative and positive numbers.
+Unsigned:  Only positive numbers (larger positive range).
+
+Use unsigned when negative values aren't required,
+e.g., for age, quantity, IDs.
+
+------------------------------------------------------------
+
+7. Types of SQL Commands
+--------------------------
+
+1. Data Definition Language (DDL)
+   → Define/modify schema
+   Commands: CREATE, ALTER, DROP, RENAME, TRUNCATE
+
+2. Data Query Language (DQL)
+   → Query data
+   Command: SELECT
+
+3. Data Manipulation Language (DML)
+   → Modify data
+   Commands: INSERT, UPDATE, DELETE
+
+4. Data Control Language (DCL)
+   → Manage user permissions
+   Commands: GRANT, REVOKE
+
+5. Transaction Control Language (TCL)
+   → Handle transactions
+   Commands: START TRANSACTION, COMMIT, ROLLBACK
+
+------------------------------------------------------------
+
+8. Basic SQL Queries
+----------------------
+
+-- Create a Database
+CREATE DATABASE db_name;
+CREATE DATABASE IF NOT EXISTS db_name; -- Best Practice
+
+-- Drop a Database
+DROP DATABASE db_name;
+DROP DATABASE IF EXISTS db_name; -- Best Practice
+
+-- Show Databases and Tables
+SHOW DATABASES;
+USE db_name;
+SHOW TABLES;
+
+-- Create a Table
+CREATE TABLE users (
+    id INT PRIMARY KEY,
+    name VARCHAR(50),
+    age INT NOT NULL
+);
+
+-- Insert Data into Table
+INSERT INTO users VALUES (1, 'Alice', 23);
+
+-- View Table Data
+SELECT * FROM users;
+
+------------------------------------------------------------
+
+9. Pro Tips
+-------------
+
+- Use IF EXISTS / IF NOT EXISTS to prevent execution errors.
+- Always define constraints like NOT NULL, PRIMARY KEY, etc.
+- Normalize your schema to reduce data redundancy.
+- Use LIMIT to preview a subset of query results.
+
+============================================================
+End of File
+============================================================
